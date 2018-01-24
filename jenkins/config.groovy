@@ -8,7 +8,7 @@ def cloudName = 'kubernetes'
 KubernetesCloud kubernetes = instance.getCloud(cloudName) ?: new KubernetesCloud(cloudName)
 
 kubernetes.setServerUrl("https://kubernetes.default.svc.cluster.local")
-kubernetes.setNamespace("jenkins")
+kubernetes.setNamespace("default")
 // Change to your local jenkins URL, note that the format starts with service-name.namespace
 kubernetes.setJenkinsUrl("http://jenkins.default.svc.cluster.local")
 
